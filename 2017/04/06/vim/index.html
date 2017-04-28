@@ -89,20 +89,20 @@
 
 <meta name="description" content="一段独白：大神：‘我用的vim，可以告别鼠标，只用键盘’小白：‘vim是什么？’大神：‘一个文本编辑器，你可以试试，要是别人听说你是一个会vim的女程序员，那可了不起，而且你现在学习就要学习那些生命周期比较长的东西，要不然一更新你所学的就out了’小白：‘可以装逼的神器，那我试试’
 于是开始了vim的学习历程
-vim安装vim download如果安装了git 可以直接修改配置nano为vim12">
+vim安装我主要是用的atom编辑期，然后下了一个vim插件，platformmio-i">
 <meta property="og:type" content="article">
 <meta property="og:title" content="vim初学指南">
 <meta property="og:url" content="http://yoursite.com/2017/04/06/vim/index.html">
 <meta property="og:site_name" content="Sicily">
 <meta property="og:description" content="一段独白：大神：‘我用的vim，可以告别鼠标，只用键盘’小白：‘vim是什么？’大神：‘一个文本编辑器，你可以试试，要是别人听说你是一个会vim的女程序员，那可了不起，而且你现在学习就要学习那些生命周期比较长的东西，要不然一更新你所学的就out了’小白：‘可以装逼的神器，那我试试’
 于是开始了vim的学习历程
-vim安装vim download如果安装了git 可以直接修改配置nano为vim12">
-<meta property="og:updated_time" content="2017-04-06T08:01:45.915Z">
+vim安装我主要是用的atom编辑期，然后下了一个vim插件，platformmio-i">
+<meta property="og:updated_time" content="2017-04-28T09:50:19.335Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="vim初学指南">
 <meta name="twitter:description" content="一段独白：大神：‘我用的vim，可以告别鼠标，只用键盘’小白：‘vim是什么？’大神：‘一个文本编辑器，你可以试试，要是别人听说你是一个会vim的女程序员，那可了不起，而且你现在学习就要学习那些生命周期比较长的东西，要不然一更新你所学的就out了’小白：‘可以装逼的神器，那我试试’
 于是开始了vim的学习历程
-vim安装vim download如果安装了git 可以直接修改配置nano为vim12">
+vim安装我主要是用的atom编辑期，然后下了一个vim插件，platformmio-i">
 
 
 
@@ -350,17 +350,31 @@ vim安装vim download如果安装了git 可以直接修改配置nano为vim12">
       
         <p>一段独白：<br>大神：‘我用的vim，可以告别鼠标，只用键盘’<br>小白：‘vim是什么？’<br>大神：‘一个文本编辑器，你可以试试，要是别人听说你是一个会vim的女程序员，那可了不起，而且你现在学习就要学习那些生命周期比较长的东西，要不然一更新你所学的就out了’<br>小白：‘可以装逼的神器，那我试试’</p>
 <p>于是开始了vim的学习历程</p>
-<h3 id="vim安装"><a href="#vim安装" class="headerlink" title="vim安装"></a>vim安装</h3><p><a href="http://www.vim.org/download.php" target="_blank" rel="external">vim download</a><br>如果安装了git 可以直接修改配置nano为vim<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ git config --global core.editor <span class="string">"vim"</span></div><div class="line">$ <span class="built_in">export</span> GIT_EDITOR=vim</div></pre></td></tr></table></figure></p>
-<p>vim共分为三种模式，分别是命令模式，插入模式，底线命令模式<br>输入vim回车键后先是进入的命令模式，此状态下敲击键盘动作会被vim识别为命令，而非输入字符</p>
+<h3 id="vim安装"><a href="#vim安装" class="headerlink" title="vim安装"></a>vim安装</h3><p>我主要是用的atom编辑期，然后下了一个vim插件，platformmio-ide-terminal然后可以在editor上面使用vim了或者</p>
+<p><a href="http://www.vim.org/download.php" target="_blank" rel="external">vim download</a><br>如果安装了git 可以直接修改配置nano为vim<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ git config --global core.editor <span class="string">"vim"</span></div><div class="line">$ <span class="built_in">export</span> GIT_EDITOR=vim</div></pre></td></tr></table></figure></p>
+<p>vim 的几种模式<br>我现在使用的有Normal , Insert最常用的模式</p>
+<p>在编辑器中我打开的时候就直接是Normal模式，在该模式下你所输入的abcd等字符都不会直接写入你的文件中，在Normal模式下这些都是命令<br>那我先介绍一下我平时最长使用的几种命令</p>
 <blockquote>
 <h3 id="5个常用的命令"><a href="#5个常用的命令" class="headerlink" title="5个常用的命令"></a>5个常用的命令</h3></blockquote>
-<p>i → Insert 模式，按 ESC 回到 Normal 模式.<br>x → 删当前光标所在的一个字符。<br>:wq → 存盘 + 退出 (:w 存盘, :q 退出)   （: 切换到底线命令模式，以在最底一行输入命令）<br>dd → 删除当前行，并把删除的行存到剪贴板里<br>p → 粘贴剪贴板</p>
+<ol>
+<li>i,I,o,O,a,A → 进入Insert 模式，按 ESC 回到 Normal 模式.<br>当然这几种插入的位置是不一样的　我建议你只需要掌握i一个就好</li>
+</ol>
+<p>i/I i 为『从目前光标所在处插入』， I 为『在目前所在行的第一个非空格符处开始插入』。<br>a/A a 为『从目前光标所在的下一个字符处开始插入』， A 为『从光标所在行的最后一个字符处开始插入』<br>o/O o 为『在目前光标所在的下一行处插入新的一行』； O 为在目前光标所在处的上一行插入新的一行！<br>r/R r 只会取代光标所在的那一个字符一次；R会一直取代光标所在的文字，直到按下 ESC 为止；</p>
+<ol>
+<li><p>y,p → 复制粘贴，我一般会使用全部的额复制一个文件，可以加上shift+v shift+g进行全选，再使用y，p。<br>当然如若你想选中某几行也是可以的</p>
+</li>
+<li><p>u → 返回你上一次进行的操作，如果按错了还可以ctrl+r回来哦</p>
+</li>
+<li><p>dd → 删除当前行，并把删除的行存到剪贴板里</p>
+</li>
+</ol>
+<p>5.　/后输入想要查找的单词再enter，输入n or N就可以向下查找了</p>
+<p>当然这些都是在Normal模式下面进行的，当你进入到Insert模式下面的时候就跟你平时编写代码的时候</p>
 <p>推荐一篇文章呗<br><a href="http://coolshell.cn/articles/5426.html" target="_blank" rel="external">简明 VIM 练级攻略</a></p>
 <p>下面可以跟着我一起操作<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ vi xxx.txt</div></pre></td></tr></table></figure></p>
 <p>命令行随便打开一个文件，vi后面必须跟文件名，不存在文件名也要输入，这样就进入了命令模式</p>
 <blockquote>
 <h3 id="命令模式切换到插入模式"><a href="#命令模式切换到插入模式" class="headerlink" title="命令模式切换到插入模式"></a>命令模式切换到插入模式</h3></blockquote>
-<p>i/I i 为『从目前光标所在处插入』， I 为『在目前所在行的第一个非空格符处开始插入』。<br>a/A a 为『从目前光标所在的下一个字符处开始插入』， A 为『从光标所在行的最后一个字符处开始插入』<br>o/O o 为『在目前光标所在的下一行处插入新的一行』； O 为在目前光标所在处的上一行插入新的一行！<br>r/R r 只会取代光标所在的那一个字符一次；R会一直取代光标所在的文字，直到按下 ESC 为止；</p>
 
       
     </div>
